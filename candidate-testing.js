@@ -35,7 +35,7 @@ function gradeQuiz(candidateAnswers) {
     if (candidateAnswers[i] === correctAnswers [i]){
     console.log(`Your answer to question ${i+1}, ${candidateAnswers[i]}, is correct!`);
     } else {
-      console.log(`Your answer to qeustion ${i+1}, ${candidateAnswers[i]}, is NOT correct. \n The correct answer is ${correctAnswers[i]}.`)
+      console.log(`Your answer to question ${i+1}, ${candidateAnswers[i]}, is NOT correct. \n The correct answer is ${correctAnswers[i]}.`)
     }
   }
     console.log(candidateAnswers)
