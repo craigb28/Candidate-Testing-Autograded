@@ -38,7 +38,6 @@ function gradeQuiz(candidateAnswers) {
       console.log(`Your answer to question ${i+1}, ${candidateAnswers[i]}, is NOT correct. \n The correct answer is ${correctAnswers[i]}.`)
     }
   }
-    console.log(candidateAnswers)
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
