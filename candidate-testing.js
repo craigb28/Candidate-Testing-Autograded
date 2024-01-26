@@ -32,15 +32,28 @@ function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   
   for (i=0; i<5; i++) {
-    if (candidateAnswers[i] === correctAnswers [i]){
+    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()){
     console.log(`Your answer to question ${i+1}, ${candidateAnswers[i]}, is correct!`);
     } else {
       console.log(`Your answer to question ${i+1}, ${candidateAnswers[i]}, is NOT correct. \n The correct answer is ${correctAnswers[i]}.`)
     }
   }
 
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
+  let grade = 0;  //TODO 3.2 use this variable to calculate the candidates score.
+  for (i=0; i<5; i++) {
+    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()){
+      grade+=1;
+    } else {
+      grade+=0
+    }
+    }
+  grade = (grade/5)*100;
+  if (grade>=80){
+    console.log(`Congratulations! Your score of ${grade}% is a passing grade.`)
+  }
+  else{
+    console.log(`Unfortunately, your score of ${grade}% is NOT a passing grade.`)
+  }
 
   return grade;
 }
